@@ -33,9 +33,9 @@ describe('Blockchain', () => {
 
     describe('when the chain starts with the genesis block and has multiple blocks', () => {
       beforeEach(() => {
-        blockchain.addBlock({ data: 'Bears' });
-        blockchain.addBlock({ data: 'Beets' });
-        blockchain.addBlock({ data: 'Battlestart Galactica' });
+        blockchain.addBlock({ data: 'Apple' });
+        blockchain.addBlock({ data: 'Bubble' });
+        blockchain.addBlock({ data: 'Cookie' });
       });
 
       describe('and a last hash reference has changed', () => {
