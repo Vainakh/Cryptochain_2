@@ -76,7 +76,7 @@ describe('Block', () => {
     });
 
     it('sets a `hash` that matches the difficulty criteria', () => {
-      expect(minBlock.hash.substring(0, mineBlock.difficulty))
+      expect(mineBlock.hash.substring(0, mineBlock.difficulty))
         .toEqual('0'.repeat(mineBlock.difficulty));
     });
   });
