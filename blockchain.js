@@ -7,7 +7,7 @@ class Blockchain {
   }
 
   addBlock({ data }) {
-    const newBlock = Block.mineBlock({
+    const newBlock = Block.minedBlock({
       lastBlock: this.chain[this.chain.length - 1],
       data
     });

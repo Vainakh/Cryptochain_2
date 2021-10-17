@@ -15,7 +15,7 @@ class Block {
     return new this(GENESIS_DATA);
   }
 
-  static mineBlock({ lastBlock, data }) {
+  static minedBlock({ lastBlock, data }) {
     let hash, timestamp;
     // const timestamp = Date.now();
     const lastHash = lastBlock.hash;

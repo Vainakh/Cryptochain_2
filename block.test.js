@@ -44,31 +44,31 @@ describe('Block', () => {
   describe('mineBlock()', () => {
     const lastBlock = Block.genesis();
     const data = 'mined data';
-    const mineBlock = Block.mineBlock({ lastBlock, data });
+    const minedBlock = Block.minedBlock({ lastBlock, data });
 
     it('returns a Block instance', () => {
-      expect(mineBlock instanceof Block).toBe(true);
+      expect(minedBlock instanceof Block).toBe(true);
     });
 
     it('sets the `lastHash` to be the `hash` of the lastBlock', () => {
-      expect(mineBlock.lastHash).toEqual(lastBlock.hash);
+      expect(minedBlock.lastHash).toEqual(lastBlock.hash);
     });
 
     it('sets the `data`', () => {
-      expect(mineBlock.data).toEqual(data);
+      expect(minedBlock.data).toEqual(data);
     });
 
     it('sets a `timestamp', () => {
-      expect(mineBlock.timestamp).not.toEqual(undefined);
+      expect(minedBlock.timestamp).not.toEqual(undefined);
     });
 
     it('creates a SHA-256 `hash` based on the proper inputs', () => {
-      expect(mineBlock.hash)
+      expect(minedBlock.hash)
         .toEqual(
           cryptoHash(
-            mineBlock.timestamp,
-            mineBlock.nonce,
-            mineBlock.difficulty,
+            minedBlock.timestamp,
+            minedBlock.nonce,
+            minedBlock.difficulty,
             lastBlock.hash,
             data
           )
@@ -76,8 +76,13 @@ describe('Block', () => {
     });
 
     it('sets a `hash` that matches the difficulty criteria', () => {
-      expect(mineBlock.hash.substring(0, mineBlock.difficulty))
-        .toEqual('0'.repeat(mineBlock.difficulty));
+      expect(minedBlock.hash.substring(0, minedBlock.difficulty))
+        .toEqual('0'.repeat(minedBlock.difficulty));
+    });
+
+    it('adjusts the difficulty', () => {
+      const possibleResults = [lastBlock.difficulty + 1, lastBlock.difficulty - 1];
+      expect(possibleResults.includes(minedBlock.difficulty)).toBe(true);
     });
   });
 
