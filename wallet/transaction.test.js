@@ -74,7 +74,7 @@ describe('Transaction', () => {
     describe('when the transaction is invalid', () => {
       describe('and a transaction outputMap value is invalid', () => {
         it('returns false and log an error', () => {
-          transaction.outputMa[senderWallet.publicKey] = 999999;
+          transaction.outputMap[senderWallet.publicKey] = 999999;
           expect(Transaction.validTransaction(transaction)).toBe(false);
           expect(errorMock).toHaveBeenCalled();
         });
