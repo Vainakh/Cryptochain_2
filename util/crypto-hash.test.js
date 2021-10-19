@@ -14,7 +14,6 @@ describe('cryptoHash()', () => {
     const foo = {};
     const originalHash = cryptoHash(foo);
     foo['a'] = 'a';
-
     expect(cryptoHash(foo)).not.toEqual(originalHash);
   });
 });
