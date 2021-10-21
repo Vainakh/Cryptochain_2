@@ -9,7 +9,7 @@ class TransactionPool {
 
   existingTransaction({ inputAddress }) {
     const transactions = Object.values(this.transactionMap);
-    return transaction.find(transaction => transaction.input.address === inputAddress);
+    return transactions.find(transaction => transaction.input.address === inputAddress);
   }
 }
 
