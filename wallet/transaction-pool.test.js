@@ -9,7 +9,7 @@ describe('TransactionPool', () => {
     transactionPool = new TransactionPool();
     senderWallet = new Wallet();
     transaction = new Transaction({
-      senderWallet: new Wallet(),
+      senderWallet,
       recipient: 'fake-recipient',
       amount: 50
     });
@@ -18,8 +18,7 @@ describe('TransactionPool', () => {
   describe('setTransaction()', () => {
     it('adds a transaction', () => {
       transactionPool.setTransaction(transaction);
-      expect(transactionPool.transactionMap[transaction.id])
-        .toBe(transaction);
+      expect(transactionPool.transactionMap[transaction.id]).toBe(transaction);
     });
   });
 
@@ -27,8 +26,7 @@ describe('TransactionPool', () => {
     it('returns an existing transaction given an input address', () => {
       transactionPool.setTransaction(transaction);
       expect(
-        transactionPool.existingTransaction({ inputAddress: senderWallet.publicKey }))
-          .toBe(transaction);
+        transactionPool.existingTransaction({ inputAddress: senderWallet.publicKey })).toBe(transaction);
     });
   });
 });
