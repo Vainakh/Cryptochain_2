@@ -11,6 +11,7 @@ class TransactionMiner {
 
   mineTransactions() {
     //get the transaction pool's valid trnasaction
+
     //generate the miner's reward
     //add a block consisting of these transactions to the blockchain
     //broadcast the updated blockchain
