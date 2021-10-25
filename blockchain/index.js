@@ -27,6 +27,11 @@ class Blockchain {
       return;
     }
 
+    if (!this.validTransactionData({ chain })) {
+      console.error('The incoming chain has invalid data');
+      return;
+    }
+
     if (onSuccess) !onSuccess();
     console.log('Replacing chain with', chain);
     this.chain = chain;
