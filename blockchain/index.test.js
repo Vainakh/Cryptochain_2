@@ -180,22 +180,23 @@ describe('Blockchain', () => {
       });
     });
 
-    describe('and the transaction data has at least one malformed outputMap', () => {
+    describe('and the transaction data has ay least one malformed outputMap', () => {
       describe('and the transaction is not a reward transaction', () => {
-        it('returns false', () => {
+        it('should return false', () => {
           transaction.outputMap[wallet.publicKey] = 999999;
-          newChain.addBlock({ data: [transaction, rewardTransaction]});
+          newChain.addBlock({ data: [transaction, rewardTransaction] });
           expect(blockchain.validTransactionData({ chain: newChain.chain })).toBe(false);
         });
       });
 
       describe('and the transaction is a reward transaction', () => {
-        it('returns false', () => {
-          rewardTransaction.outputMap[wallet.publickKey] = 999999;
+        it('should return false', () => {
+          rewardTransaction.outputMap[wallet.publicKey] = 999999;
           newChain.addBlock({ data: [transaction, rewardTransaction] });
           expect(blockchain.validTransactionData({ chain: newChain.chain })).toBe(false);
         });
       });
+    });
 
     describe('and the transaction data has at least one malformed input', () => {
       it('returns false', () => {

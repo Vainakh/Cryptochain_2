@@ -167,7 +167,7 @@ describe('Wallet', () => {
               amount: 75
             });
 
-            block.addBlock({ data: [nextBlockTransaction] });
+            blockchain.addBlock({ data: [nextBlockTransaction] });
           });
 
           it('includes the output amounts in the returned balance', () => {
@@ -185,5 +185,7 @@ describe('Wallet', () => {
         });
       });
     });
+
+
   });
 });
