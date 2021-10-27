@@ -21,6 +21,7 @@ const DEFAULT_PORT = 3000;
 const ROOT_NODE_ADDRESS = `http://localhost:${DEFAULT_PORT}`;
 
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'client')));
 
 app.get('/api/blocks', (req, res) => {
   res.json(blockchain.chain);
@@ -83,7 +84,7 @@ app.get('/api/wallet-info', (req, res) => {
 
 app.get('*', (req, res) => {
   res.sendFile(
-    path.join(__dirname, './client/index.html'));
+    path.join(__dirname, 'client/index.html'));
 });
 
 const syncWithRootState = () => {
