@@ -44,4 +44,14 @@ a, a:hover {
   background-color: rgb(139, 0, 0);
 }
 
+span {
+  color: rgb(139, 0, 0);
+  font-size: 30px;;
+}
+
+.ConductTransaction {
+  margin: 10%;
+
+}
+
 /*# sourceMappingURL=/src.9ad09f98.css.map */

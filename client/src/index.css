@@ -43,3 +43,13 @@ a, a:hover {
   color: white;
   background-color: rgb(139, 0, 0);
 }
+
+span {
+  color: rgb(139, 0, 0);
+  font-size: 30px;;
+}
+
+.ConductTransaction {
+  margin: 10%;
+
+}
