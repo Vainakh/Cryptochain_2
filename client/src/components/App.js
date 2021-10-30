@@ -21,16 +21,9 @@ class App extends Component {
           Welcome to the <span><strong>Dragon</strong></span> blockchain...
         </div>
         <br/>
-          <div>
-            <Link to='/blocks'>
-              Blocks
-            </Link>
-          </div>
-          <div>
-            <Link to='/conduct-transaction'>
-              Conduct a Transaction
-            </Link>
-          </div>
+          <div><Link to='/blocks'>Blocks</Link></div>
+          <div><Link to='/conduct-transaction'>Conduct a Transaction</Link></div>
+          <div><Link to='/transaction-pool'>Transaction Pool</Link></div>
         <br/>
         <div className='WalletInfo'>
           <div>Address: { address }</div>
