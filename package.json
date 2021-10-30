@@ -38,6 +38,7 @@
     "react-router-dom": "^4.3.1",
     "redis": "^2.8.0",
     "request": "^2.88.0",
+    "uninstall": "0.0.0",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
