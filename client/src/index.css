@@ -51,5 +51,9 @@ span {
 
 .ConductTransaction {
   margin: 10%;
+}
 
+.ConductTransactionButton {
+  background-color: rgb(139, 0, 0);
+  margin: 5%;
 }
