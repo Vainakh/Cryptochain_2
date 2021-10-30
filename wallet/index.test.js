@@ -105,7 +105,7 @@ describe('Wallet', () => {
     });
 
     describe('and there are outputs for the wallet', () => {
-      let transctionOne, transactionTwo;
+      let transactionOne, transactionTwo;
       beforeEach(() => {
         transactionOne = new Wallet().createTransaction({
           recipient: wallet.publicKey,

@@ -25,7 +25,7 @@ const pubsub = new PubSub({ blockchain, transactionPool, redisURL: REDIS_URL });
 const transactionMiner = new TransactionMiner({ blockchain, transactionPool, wallet, pubsub });
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'client/dist/index.html')));
+app.use(express.static(path.join(__dirname, 'client/dist')));
 
 app.get('/api/blocks', (req, res) => {
   res.json(blockchain.chain);
@@ -88,7 +88,7 @@ app.get('/api/wallet-info', (req, res) => {
 
 app.get('*', (req, res) => {
   res.sendFile(
-    path.join(__dirname, 'client/dist/index.html'));
+    path.join(__dirname, 'client/dist'));
 });
 
 const syncWithRootState = () => {
