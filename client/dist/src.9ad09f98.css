@@ -11,6 +11,7 @@ body {
 .logo {
   width: 250px;
   height: 250px;
+  color: red;
 }
 
 .App {
@@ -31,6 +32,11 @@ body {
 
 .Transaction {
   padding: 5%;
+}
+
+a, a:hover {
+  color: rgb(139, 0, 0);
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=/src.9ad09f98.css.map */
