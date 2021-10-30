@@ -39,4 +39,9 @@ a, a:hover {
   text-decoration: underline;
 }
 
+.blockButton {
+  color: white;
+  background-color: rgb(139, 0, 0);
+}
+
 /*# sourceMappingURL=/src.9ad09f98.css.map */

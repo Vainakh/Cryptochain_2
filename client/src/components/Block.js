@@ -44,7 +44,7 @@ class Block extends Component {
       <div>
         <div>Data: {dataDisplay}</div>
         <Button
-          bsstyle="danger"
+          className="blockButton"
           bssize="small"
           onClick={this.toggleTransaction}
         >

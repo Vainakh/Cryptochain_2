@@ -51654,7 +51654,7 @@ var Block = /*#__PURE__*/function (_Component) {
       }
 
       return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, "Data: ", dataDisplay), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
-        bsstyle: "danger",
+        className: "blockButton",
         bssize: "small",
         onClick: this.toggleTransaction
       }, "Show More"));

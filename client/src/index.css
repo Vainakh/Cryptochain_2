@@ -38,3 +38,8 @@ a, a:hover {
   color: rgb(139, 0, 0);
   text-decoration: underline;
 }
+
+.blockButton {
+  color: white;
+  background-color: rgb(139, 0, 0);
+}
