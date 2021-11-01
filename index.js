@@ -11,6 +11,7 @@ const Wallet = require('./wallet');
 const TransactionMiner = require('./app/transaction-miner');
 
 const isDevelopment = process.env.ENV === 'development';
+
 const REDIS_URL = isDevelopment ?
   'redis://127.0.0.1:6379' :
   'redis://:pbb4db11561e85218ca4121245603967a7ce063fac5e6608fb570654d5e0f4830@ec2-23-20-105-73.compute-1.amazonaws.com:7869'
